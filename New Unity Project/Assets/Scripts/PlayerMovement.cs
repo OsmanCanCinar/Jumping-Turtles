@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask ground;
     private enum MovementState { idle, running, jumping, falling}
 
-    // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -23,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
         collider = GetComponent<BoxCollider2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         dirX = Input.GetAxisRaw("Horizontal");
@@ -79,11 +77,5 @@ public class PlayerMovement : MonoBehaviour
 }
 
 /*
-    ** Comments **
-    int number = 16;
-    float decimalNumber = 4.54f;
-    string text = "Osman";
-    bool flag = false;
-    Debug.Log(text);
     Input.GetKeyDown("space");
  */
